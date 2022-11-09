@@ -1,0 +1,10 @@
+.header{
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    background-color: #b0d5de;
+}
+.header_logo{
+    object-fit: contain;
+    height: 30px;
+}
