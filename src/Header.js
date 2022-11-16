@@ -18,13 +18,16 @@ function Header() {
             <LinkContainer to="/">
               <Navbar.Brand><img className="header_logo" src={require("./logo.jpeg")} alt=""/></Navbar.Brand>
             </LinkContainer>
-
-            <Nav className="me-auto  w-100  justify-content-end">
-
-              <IconButton id="icon">
-                <ShoppingCartIcon/>
-              </IconButton>
-
+            <div class="input-group">
+              <input type="search" class="form-control" placeholder='Search' aria-label='Search' aria-describedby='search-addon'/>
+              <button type="button" class="btn btn-dark">Search</button>
+            </div>
+            <Nav>
+              <Link to="/mycart" className="nav-link">
+                <IconButton id="icon">
+                  <ShoppingCartIcon/>
+                </IconButton>
+              </Link>
               <Link to="/login" className="nav-link">
                 <IconButton id="icon">
                   <AccountCircleIcon  />

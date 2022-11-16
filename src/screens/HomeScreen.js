@@ -1,6 +1,5 @@
 import React, {useState} from "react"; 
 import Carousel from 'react-bootstrap/Carousel';
-import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -35,7 +34,7 @@ function HomeScreen() {
         <img
           className="d-block w-100"
           src={slide.image}
-          alt="slider image"
+          alt="slider"
         />
         <Carousel.Caption>
           <h3>{slide.caption}</h3>
@@ -47,9 +46,7 @@ function HomeScreen() {
       
     </Carousel>
 
-    <Link to="/livingroom">Living Room</Link><br/>
-    <Link to="/bedroom">Bed Room</Link><br/>
-    <Link to="/kitchen">Kitchen</Link><br/>
+   
 
     </div>
   );
