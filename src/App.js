@@ -11,6 +11,7 @@ import Checkout from './screens/Checkout';
 import LivingRoom from './screens/LivingRoom';
 import Dining from './screens/Dining';
 import BedRoom from './screens/BedRoom';
+import ProductScreen from './screens/PrdouctScreen';
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +27,7 @@ function App() {
           <Route path="/livingroom" element={<LivingRoom/>} />
           <Route path="/dining" element={<Dining/>} />
           <Route path="/bedroom" element={<BedRoom/>} />
+          <Route path="/product/:slug" element={<ProductScreen/>}/>
         </Routes>
       </main>
       <Footer/>

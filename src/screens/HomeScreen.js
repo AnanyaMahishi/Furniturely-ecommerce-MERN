@@ -56,13 +56,13 @@ function HomeScreen() {
        
         <div class="form d-flex justify-content-between">
           <div class="column">
-            <Link to="/livingroom"><div class="bg-image hover-zoom"><img src={require("./i1.png")} alt="img1"/></div></Link>
+            <Link to="/dining"><div class="bg-image hover-zoom"><img src={require("./i1.png")} alt="img1"/></div></Link>
           </div>
           <div class="column">
-            <Link to="/bedroom"><img  src={require("./i2.png")} alt="img2"/></Link>
+            <Link to="/livingroom"><img  src={require("./i2.png")} alt="img2"/></Link>
           </div>
           <div class="column">
-            <Link to="/kitchen"><img  src={require("./i3.png")} alt="img3"/></Link>
+            <Link to="/bedroom"><img  src={require("./i3.png")} alt="img3"/></Link>
           </div>
           </div>
           </div>
