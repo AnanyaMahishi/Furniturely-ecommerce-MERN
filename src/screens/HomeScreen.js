@@ -1,5 +1,7 @@
 import React, {useState} from "react"; 
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from "react-router-dom";
+import './HomeScreen.css';
 
 const data = [
   {
@@ -46,9 +48,34 @@ function HomeScreen() {
       
     </Carousel>
 
+    <br/>
+        <br/>
+      <h3 class="text-center">Shop Your Favorite</h3>
+      <div class="container">
+        <div className="signup-content" class="row d-flex justify-content-center align-items-center">
+       
+        <div class="form d-flex justify-content-between">
+          <div class="column">
+            <Link to="/livingroom"><div class="bg-image hover-zoom"><img src={require("./i1.png")} alt="img1"/></div></Link>
+          </div>
+          <div class="column">
+            <Link to="/bedroom"><img  src={require("./i2.png")} alt="img2"/></Link>
+          </div>
+          <div class="column">
+            <Link to="/kitchen"><img  src={require("./i3.png")} alt="img3"/></Link>
+          </div>
+          </div>
+          </div>
+          <br/>
+          <br/>
+          <br/>
+          
+      </div>
+
    
 
     </div>
   );
 }
 export default HomeScreen;
+

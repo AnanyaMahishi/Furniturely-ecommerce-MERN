@@ -7,7 +7,8 @@ import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
+import {  Nav, NavDropdown } from 'react-bootstrap';
+import SearchIcon from '@mui/icons-material/Search';
 
 function Header() {
   return (
@@ -18,9 +19,21 @@ function Header() {
             <LinkContainer to="/">
               <Navbar.Brand><img className="header_logo" src={require("./logo.jpeg")} alt=""/></Navbar.Brand>
             </LinkContainer>
-            <div class="input-group">
-              <input type="search" class="form-control" placeholder='Search' aria-label='Search' aria-describedby='search-addon'/>
-              <button type="button" class="btn btn-dark">Search</button>
+            <Nav>
+            <Nav.Item>
+              <Nav.Link href="/">Home</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+            <NavDropdown title=" Products" id="nav-dropdown">
+                <NavDropdown.Item href="/livingroom">Living Room</NavDropdown.Item>
+                <NavDropdown.Item  href="/dining">Dining</NavDropdown.Item>
+                <NavDropdown.Item href="/bedroom">Bed Room</NavDropdown.Item>
+              </NavDropdown>
+            </Nav.Item>
+            </Nav>
+            <div class="input-group w-25  rounded-pill bg-light">
+              <input type="search" class="form-control rounded-pill border border-light  bg-light " placeholder='Search' aria-label='Search' aria-describedby='search-addon' />
+              <button type="button" class="btn  btn-light rounded-pill border  border-0"><SearchIcon/></button>
             </div>
             <Nav>
               <Link to="/mycart" className="nav-link">
@@ -44,3 +57,4 @@ function Header() {
 }
 
 export default Header
+

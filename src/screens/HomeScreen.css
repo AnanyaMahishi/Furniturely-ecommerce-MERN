@@ -1,0 +1,16 @@
+.column {
+    flex: 30%;
+    float: left;
+    padding-right:115px ;
+    padding-top:30px ;
+  }
+  .column:hover{
+    transform: scale(1.2);
+  }
+  img {
+    width: 260px;
+  }
+  .container {
+    display: flex;
+        
+  }

@@ -1,5 +1,6 @@
 import React from 'react'
-import "./MyCart.css"
+
+import { Link } from 'react-router-dom'
 import CartItem from './CartItem'
 function MyCart() {
   return (
@@ -10,7 +11,7 @@ function MyCart() {
             <p>221</p>
         </div>
         <div>
-            <button>Checkout</button>
+          <Link to="/checkout"><button>Checkout</button></Link>
         </div>
       </div>
       <div className='cart__left'>

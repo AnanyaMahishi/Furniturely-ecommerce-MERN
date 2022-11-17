@@ -1,5 +1,15 @@
 #login_img {
-    width:540px;
+    width:500px;
     height:400px;
-    float: right; 
+    float: right;
+}
+
+.form{
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 50px;
+}
+
+#l_c{
+    padding-top: 20px;
 }
