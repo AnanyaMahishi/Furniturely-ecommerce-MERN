@@ -54,7 +54,7 @@ function HomeScreen() {
       <div class="container">
         <div className="signup-content" class="row d-flex justify-content-center align-items-center">
        
-        <div class="form d-flex justify-content-between">
+        <div class="form d-flex justify-content-center">
           <div class="column">
             <Link to="/dining"><div class="bg-image hover-zoom"><img src={require("./i1.png")} alt="img1"/></div></Link>
           </div>
