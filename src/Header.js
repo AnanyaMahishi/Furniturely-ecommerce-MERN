@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Header.css"
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Navbar from 'react-bootstrap/Navbar'
@@ -10,7 +9,20 @@ import { Link } from 'react-router-dom';
 import {  Nav, NavDropdown } from 'react-bootstrap';
 import SearchIcon from '@mui/icons-material/Search';
 
+import { Store } from './Store';
+
 function Header() {
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const {userInfo } = state;
+
+  const signoutHandler = () => {
+    ctxDispatch({ type: 'USER_SIGNOUT' });
+    localStorage.removeItem('userInfo');
+    localStorage.removeItem('shippingAddress');
+    localStorage.removeItem('paymentMethod');
+    window.location.href = '/login';
+  };
+
   return (
     <div className='header'>
       <Navbar>
@@ -41,11 +53,32 @@ function Header() {
                   <ShoppingCartIcon/>
                 </IconButton>
               </Link>
-              <Link to="/login" className="nav-link">
-                <IconButton id="icon">
-                  <AccountCircleIcon  />
-                </IconButton>
-              </Link>
+
+              {
+              userInfo ? 
+                (
+                    <NavDropdown title={userInfo.name} id="nav-dropdown">
+
+                      <LinkContainer to="/profile">
+                        <NavDropdown.Item>User Profile</NavDropdown.Item>
+                      </LinkContainer>
+
+                      <NavDropdown.Divider />
+
+                      <Link className="dropdown-item" to="#signout" onClick={signoutHandler}>
+                        Sign Out
+                      </Link>
+
+                    </NavDropdown>
+                ) : 
+                
+                (
+                    <Link className="nav-link" to="/login">
+                      Login
+                    </Link>
+                )
+              
+              }
 
             </Nav>
             

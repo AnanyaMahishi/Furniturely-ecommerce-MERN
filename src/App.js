@@ -3,6 +3,9 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
+
+
+
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
@@ -12,10 +15,16 @@ import LivingRoom from './screens/LivingRoom';
 import Dining from './screens/Dining';
 import BedRoom from './screens/BedRoom';
 import ProductScreen from './screens/PrdouctScreen';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
+
   return (
     <BrowserRouter>
     <div className="d-flex flex-column site-container">
+    <ToastContainer position="bottom-center" limit={1} />
       <Header />
       <main>
         <Routes>

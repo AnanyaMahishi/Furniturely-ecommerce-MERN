@@ -1,11 +1,24 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useContext, useEffect, useState } from "react"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import Axios from 'axios'
 import "./LoginScreen.css"
+import { Store } from '../Store';
+import { toast } from "react-toastify";
+import { getError } from "../utils";
 
 const Login=()=>{
+
+    const navigate = useNavigate();
+    const { search } = useLocation();
+    const redirectInUrl = new URLSearchParams(search).get('redirect');
+    const redirect = redirectInUrl ? redirectInUrl : '/';
+
    const[email,setEmail]=useState('')
    const[password,setPassword]=useState('') 
+
+   const { state, dispatch: ctxDispatch } = useContext(Store);
+   const { userInfo } = state;
+
    const handleSubmit= async(e)=>{
     e.preventDefault()
     try{
@@ -14,12 +27,25 @@ const Login=()=>{
             "email" : email,
             "password": password
         });
+
+        ctxDispatch({ type: 'USER_SIGNIN', payload: data });
+        localStorage.setItem('userInfo', JSON.stringify(data));
+        navigate(redirect || '/');
         console.log('data is ', data) ;
 
     }catch(err){
+        toast.error(getError(err));
     }
+
+}
+
+    useEffect(() => {
+        if (userInfo) {
+          navigate(redirect);
+        }
+      }, [navigate, redirect, userInfo]);
      
-   }
+
    return(
         
             <div class="container" id="l_c">
