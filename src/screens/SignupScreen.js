@@ -5,11 +5,10 @@ import "./LoginScreen.css"
 const Signup=()=>{
     const[name,setName]=useState('')
     const[email,setEmail]=useState('')
-    const[phone,setPhone]=useState('')
     const[password,setPassword]=useState('') 
     const handleSubmit= async(e)=>{
         e.preventDefault()
-        console.log(name,email,phone,password)  
+        console.log(name,email,password)  
     }
    return(
         
