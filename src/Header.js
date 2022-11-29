@@ -1,13 +1,12 @@
 import React, { useContext } from 'react'
 import "./Header.css"
 import IconButton from '@mui/material/IconButton';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 import {  Nav, NavDropdown } from 'react-bootstrap';
-import SearchIcon from '@mui/icons-material/Search';
+import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 
 import { Store } from './Store';
 
@@ -18,13 +17,13 @@ function Header() {
   const signoutHandler = () => {
     ctxDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
-    localStorage.removeItem('shippingAddress');
-    localStorage.removeItem('paymentMethod');
+    // localStorage.removeItem('shippingAddress');
+    // localStorage.removeItem('paymentMethod');
     window.location.href = '/login';
   };
 
   return (
-    <div className='header'>
+    <div name='header'>
       <Navbar>
           <Container>
 
@@ -43,16 +42,16 @@ function Header() {
               </NavDropdown>
             </Nav.Item>
             </Nav>
-            <div class="input-group w-25  rounded-pill bg-light">
-              <input type="search" class="form-control rounded-pill border border-light  bg-light " placeholder='Search' aria-label='Search' aria-describedby='search-addon' />
-              <button type="button" class="btn  btn-light rounded-pill border  border-0"><SearchIcon/></button>
-            </div>
+ 
             <Nav>
-              <Link to="/mycart" className="nav-link">
+            <Link to="/moodboard" className="nav-link">
                 <IconButton id="icon">
-                  <ShoppingCartIcon/>
+                  <AutoAwesomeMosaicIcon/>
                 </IconButton>
               </Link>
+            </Nav>
+            <Nav>
+    
 
               {
               userInfo ? 

@@ -30,7 +30,7 @@ const Signup=()=>{
           }
         try{
             console.log('login start ', name,email,password);
-            const { data }= await Axios.post('http://localhost:5000/api/users/signup',{
+            const { data }= await Axios.post('http://127.0.0.1:5000/api/users/signup',{
                 "name"  : name,
                 "email" : email,
                 "password": password
@@ -54,7 +54,7 @@ const Signup=()=>{
    return(
         
         <section className="sign-up">
-            <div class="container" id="l_c">
+            <div className="container" id="l_c">
                 <div className="signup-content" class="row d-flex justify-content-center align-items-center">
                 <div class="form d-flex justify-content-between">
                     <div className="login-image">

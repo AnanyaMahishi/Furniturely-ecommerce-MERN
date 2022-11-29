@@ -6,18 +6,12 @@ import './HomeScreen.css';
 const data = [
   {
    image: require('./c1.jpg'), 
-   caption:"Caption",
-   description:"Description Here"
   },
   {
     image:require('./c2.jpg'), 
-    caption:"Caption",
-    description:"Description Here"
    },
    {
     image:require('./c3.jpg'), 
-    caption:"Caption",
-    description:"Description Here"
    } 
 ]
 
@@ -38,10 +32,6 @@ function HomeScreen() {
           src={slide.image}
           alt="slider"
         />
-        <Carousel.Caption>
-          <h3>{slide.caption}</h3>
-          <p>{slide.description}</p>
-        </Carousel.Caption>
       </Carousel.Item>
         )
       })}
@@ -78,4 +68,3 @@ function HomeScreen() {
   );
 }
 export default HomeScreen;
-

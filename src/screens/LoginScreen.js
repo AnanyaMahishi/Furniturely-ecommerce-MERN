@@ -23,7 +23,7 @@ const Login=()=>{
     e.preventDefault()
     try{
         console.log('login start ', email, password);
-        const { data }= await Axios.post('http://localhost:5000/api/users/login',{
+        const { data }= await Axios.post('http://127.0.0.1:5000/api/users/login',{
             "email" : email,
             "password": password
         });
@@ -48,7 +48,7 @@ const Login=()=>{
 
    return(
         
-            <div class="container" id="l_c">
+            <div className="container" id="l_c">
             
                 <div class="form d-flex justify-content-between">
 
