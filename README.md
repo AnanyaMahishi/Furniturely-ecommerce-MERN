@@ -21,7 +21,7 @@ Furniturely is a modern furniture e-commerce website built using the MERN stack 
 
 ## Demo
 
-[https://youtu.be/w8lnNs9LsXk]()
+[https://youtu.be/w8lnNs9LsXk](Link to youtube demo)
 
 ## Installation
 
@@ -66,8 +66,8 @@ Create a .env file in the backend directory and add the following variables:
         JWT_SECRET=<your-jwt-secret>```
 
 ## Technologies Used
-MongoDB: NoSQL database for storing product and user data
-Express.js: Web application framework for Node.js
-React: Front-end library for building user interfaces
-Node.js: JavaScript runtime for building the server-side application
-Bootstrap: CSS framework for responsive design
+- MongoDB: NoSQL database for storing product and user data
+- Express.js: Web application framework for Node.js
+- React: Front-end library for building user interfaces
+- Node.js: JavaScript runtime for building the server-side application
+- Bootstrap: CSS framework for responsive design
