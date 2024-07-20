@@ -21,7 +21,7 @@ Furniturely is a modern furniture e-commerce website built using the MERN stack 
 
 ## Demo
 
-[https://youtu.be/w8lnNs9LsXk](Link to youtube demo)
+[https://www.youtube.com/watch?v=w8lnNs9LsXk](Link to youtube demo)
 
 ## Installation
 
@@ -34,13 +34,17 @@ To get a local copy up and running, follow these steps:
 
 2. **Navigate to the project directory and install server dependencies**
    ```bash
-   cd backend
-   npm install```
+      cd backend
+      npm install
+      
+   ```
 
 
 3. **Install client dependencies:**
    ```bash
-   npm install```
+      npm install
+
+   ```
 
 ## Usage
 
@@ -51,19 +55,23 @@ To get a local copy up and running, follow these steps:
    ```bash
    cd backend
    npm start
+   ```
 
 2. **Start the client:**
 
    ```bash
    npm start
+   ```
 
 3. **Open your browser and visit:**
     `http://localhost:3000`
 
 ### Environment Variables
 Create a .env file in the backend directory and add the following variables:
-    ```MONGO_URI=<your-mongodb-connection-string>
-        JWT_SECRET=<your-jwt-secret>```
+   ```
+      MONGO_URI=<your-mongodb-connection-string>
+      JWT_SECRET=<your-jwt-secret>
+   ```
 
 ## Technologies Used
 - MongoDB: NoSQL database for storing product and user data
