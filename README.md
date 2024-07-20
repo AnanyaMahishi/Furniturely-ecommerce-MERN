@@ -21,7 +21,7 @@ Furniturely is a modern furniture e-commerce website built using the MERN stack 
 
 ## Demo
 
-[https://www.youtube.com/watch?v=w8lnNs9LsXk](Link to youtube demo)
+[Link to youtube demo](https://www.youtube.com/watch?v=w8lnNs9LsXk)
 
 ## Installation
 
